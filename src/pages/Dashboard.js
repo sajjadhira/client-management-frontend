@@ -16,6 +16,7 @@ import { FcSalesPerformance } from "react-icons/fc";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { FaUsers } from "react-icons/fa";
 import { FiPieChart, FiArrowUp, FiArrowDown } from "react-icons/fi";
+import { BsCheckAll } from "react-icons/bs";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -148,11 +149,11 @@ const Dashboard = () => {
                   <AiOutlineLineChart />
                 </span>
                 <span className="text-primary fs-3 fw-light ms-auto">
-                  Sales
+                  Tasks Assigned
                 </span>
               </Card.Title>
               <div className="text-center">
-                <span className="ms-auto fw-bold fs-4 text-muted">$10,254</span>
+                <span className="ms-auto fw-bold fs-4 text-muted">10,254</span>
 
                 <span className="pills light-bg-success ms-2">
                   <FiArrowUp /> 10%
@@ -183,11 +184,11 @@ const Dashboard = () => {
                   <FcSalesPerformance />
                 </span>
                 <span className="text-warning fs-3 fw-light ms-auto">
-                  Expense
+                  Task Pending
                 </span>
               </Card.Title>
               <div className="text-center">
-                <span className="ms-auto fw-bold fs-4 text-muted">$18,254</span>
+                <span className="ms-auto fw-bold fs-4 text-muted">18,254</span>
                 <span className="pills light-bg-warning ms-2">
                   <FiArrowUp /> 15%
                 </span>
@@ -213,16 +214,16 @@ const Dashboard = () => {
             <Card.Body>
               <Card.Title className="mt-1">
                 <span className="shape-icons light-bg-success me-2 ms-auto">
-                  <FiPieChart />
+                  <BsCheckAll />
                 </span>
                 <span className="text-success fs-3 fw-light ms-auto">
-                  Profit
+                  Task Done
                 </span>
               </Card.Title>
               <div className="text-center">
-                <span className="ms-auto fw-bold fs-4 text-muted">-$8,254</span>
-                <span className="pills light-bg-danger ms-2">
-                  <FiArrowDown /> 15%
+                <span className="ms-auto fw-bold fs-4 text-muted">8,254</span>
+                <span className="pills light-bg-success ms-2">
+                  <FiArrowUp /> 15%
                 </span>
               </div>
               <Card.Text className="mt-0">
@@ -249,7 +250,7 @@ const Dashboard = () => {
                   <FaUsers />
                 </span>
                 <span className="text-success fs-3 fw-light ms-auto">
-                  Users
+                  Clients
                 </span>
               </Card.Title>
               <div className="text-center">

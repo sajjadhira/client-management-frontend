@@ -20,6 +20,8 @@ import Todos from "./pages/Todos";
 import Newtodo from "./pages/Newtodo";
 import Todoedit from "./pages/Todoedit";
 import Notfound from "./pages/Notfound";
+import Clients from "./pages/Clients";
+import Clientsadd from "./pages/Clientsadd";
 
 export const globalContext = React.createContext();
 
@@ -60,11 +62,11 @@ function App() {
               />
               <Route
                 path="/clients/"
-                element={<Content children={<Todos />} />}
+                element={<Content children={<Clients />} />}
               />
               <Route
-                path="/new/client/"
-                element={<Content children={<Newtodo />} />}
+                path="/clients/add"
+                element={<Content children={<Clientsadd />} />}
               />
               <Route
                 path="/client/edit/:id"

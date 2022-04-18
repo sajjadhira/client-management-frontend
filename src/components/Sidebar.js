@@ -21,7 +21,7 @@ import avatar from "../images/avatar.jpg";
 import { globalContext } from "../App";
 
 const Sidebar = () => {
-  const [pagesmenu, setpagesmenu] = useState(false);
+  const [clientsmenu, setClientsmenu] = useState(false);
 
   const name = localStorage.getItem("name");
   const role = localStorage.getItem("role");
@@ -54,7 +54,7 @@ const Sidebar = () => {
           </li>
 
           <li className="mt-3">
-            <Link to="/todofi/" className="nav-link px-3 sidebar-link">
+            <Link to="/dashboard/" className="nav-link px-3 sidebar-link">
               <span>
                 <AiOutlineDashboard className="me-2" />
               </span>
@@ -62,49 +62,49 @@ const Sidebar = () => {
             </Link>
           </li>
 
-          {/* pages menu */}
+          {/* clients menu */}
 
           <li className="mt-3">
             <Link
               to="#"
-              onClick={() => setpagesmenu(!pagesmenu)}
-              aria-controls="pagesmenu"
-              aria-expanded={pagesmenu}
+              onClick={() => setClientsmenu(!clientsmenu)}
+              aria-controls="clientsmenu"
+              aria-expanded={clientsmenu}
               className="nav-link px-3 sidebar-link"
             >
               <span className="me-2">
                 <BiTable />
               </span>
-              <span>Todos</span>
+              <span>Clients</span>
               <span className="right-icon ms-auto">
                 <BiChevronDown />
               </span>
             </Link>
 
-            <Collapse in={pagesmenu}>
-              <div id="pagesmenu">
+            <Collapse in={clientsmenu}>
+              <div id="clientsmenu">
                 <ul className="navbar-nav ps-5">
                   <li>
-                    <Link to="/todos/" className="nav-link mt-2">
+                    <Link to="/clients/" className="nav-link mt-2">
                       <span className="me-2 ms-2">
                         <BiCircle />
                       </span>
-                      <span>All Todos</span>
+                      <span>All Clients</span>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/new/todo/" className="nav-link mt-2">
+                    <Link to="/clients/add/" className="nav-link mt-2">
                       <span className="me-2 ms-2">
                         <BiCircle />
                       </span>
-                      <span>New Todo</span>
+                      <span>New Client</span>
                     </Link>
                   </li>
                 </ul>
               </div>
             </Collapse>
           </li>
-          {/* pages menu */}
+          {/* clients menu */}
         </ul>
       </Offcanvas.Body>
     </>

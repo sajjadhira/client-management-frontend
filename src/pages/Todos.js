@@ -28,7 +28,6 @@ const Todos = () => {
     localStorage.getItem("page") ? localStorage.getItem("page") : 1
   );
 
-  console.log(endpoint);
   useEffect(() => {
     document.title = "TODOs";
     // console.log(page);
@@ -44,6 +43,7 @@ const Todos = () => {
     setPage(data?.data?.pages);
     localStorage.setItem("page", data?.data?.pages);
   }
+
   if (data?.data?.result?.length == 0) {
     return (
       <>
